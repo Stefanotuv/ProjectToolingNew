@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title></title>
+    <link rel="stylesheet" href="{% static "CSS/master.css" %}"/>
+  </head>
+  <body>
+    <h1>THIS IS THE MASTERDATA help FILE and coming from Docker</h1>
+
+<!--    this is the template for the masterdata application below is the part that
+    Django can inject in the file-->
+
+   {{ bodytoolingstrat }}
+   <img src="{% static "images/mam.jpg" %}" alt="Ops...">
+
+
+  </body>
+</html>
