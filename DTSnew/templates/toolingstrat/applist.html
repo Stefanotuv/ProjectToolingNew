@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title></title>
+    <link rel="stylesheet" href="{% static "css/master.css" %}"/>
+  </head>
+  <body>
+    <h1>THIS IS THE MASTERDATA help FILE and coming from Docker</h1>
+
+<!--    this is the template for the masterdata application below is the part that
+    Django can inject in the file-->
+
+    <!--   here the table to show the application list -->
+    <div class="toolinglist">
+      {% if app_list %}
+      <table>
+        <thead>
+          
+          <th>App Type</th>
+          <th>App ID</th>
+          <th>App Name</th>
+          
+        </thead>
+        {% for app in app_list %}
+        <tr>
+          <td>{{ app.app_type}}</td>
+          <td>{{ app.app_ID}}</td>
+          <td>{{ app.app_name}}</td>
+        </tr>
+        {% endfor %}
+
+      </table>
+
+      {% else %}
+
+      <p>Sorry nothing found...</p>
+
+      {% endif %}
+
+
+</div>
+
+   
+
+
+  </body>
+</html>
