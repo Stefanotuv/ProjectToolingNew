@@ -20,7 +20,7 @@ class Region(models.Model):
 
 class Application(models.Model):
     app_type = models.ForeignKey('AppType',on_delete=models.CASCADE)
-    app_ID = models.CharField(max_length=3,unique=True)
+    app_ID = models.CharField(max_length=6,unique=True)
     app_name = models.CharField(max_length=264,unique=True)
 
     def __str__(self):
