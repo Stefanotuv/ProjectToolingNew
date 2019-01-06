@@ -6,5 +6,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='toolingstrat'),
-    path('applist/', views.applist, name='applist')
+    path('applist/', views.applist, name='applist'),
+    path('form/', views.forms, name='form1')
 ]
